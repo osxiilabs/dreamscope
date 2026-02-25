@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Hero = () => {
   return (
     <div className="relative overflow-hidden">
@@ -19,9 +21,12 @@ const Hero = () => {
             <a href="#faq" className="text-gray-700 hover:text-purple-600 transition">FAQ</a>
             <a href="#contact" className="text-gray-700 hover:text-purple-600 transition">Contact</a>
           </div>
-          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition transform hover:scale-105">
+          <Link 
+            to="/dashboard"
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition transform hover:scale-105"
+          >
             Sign In
-          </button>
+          </Link>
         </div>
       </nav>
 
@@ -49,9 +54,12 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition transform hover:scale-105 w-full sm:w-auto">
+            <Link 
+              to="/dashboard"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition transform hover:scale-105 w-full sm:w-auto"
+            >
               Start Interpreting Dreams
-            </button>
+            </Link>
             <button className="bg-white text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-purple-50 transition w-full sm:w-auto">
               Watch Demo
             </button>

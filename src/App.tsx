@@ -1,22 +1,15 @@
-import Hero from './components/Hero'
-import Features from './components/Features'
-import HowItWorks from './components/HowItWorks'
-import Pricing from './components/Pricing'
-import FAQ from './components/FAQ'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Landing from './pages/Landing'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Pricing />
-      <FAQ />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   )
 }
 
